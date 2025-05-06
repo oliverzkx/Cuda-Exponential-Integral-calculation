@@ -9,7 +9,9 @@
  * @param b Right endpoint of the interval.
  * @param output Pointer to host memory to store results (flattened n×m array).
  */
-void launchKernelFloat(int n, int m, float a, float b, float* output);
+void launchKernelFloat(int n, int m, float a, float b, float* output, bool timing);
+
+
 
 /**
  * @brief Launches CUDA kernel to compute exponential integral using double precision.
@@ -20,4 +22,4 @@ void launchKernelFloat(int n, int m, float a, float b, float* output);
  * @param b Right endpoint of the interval.
  * @param output Pointer to host memory to store results (flattened n×m array).
  */
-void launchKernelDouble(int n, int m, double a, double b, double* output);
+void launchKernelDouble(int n, int m, double a, double b, double* output, bool timing);

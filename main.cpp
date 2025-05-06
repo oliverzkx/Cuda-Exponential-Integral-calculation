@@ -108,8 +108,8 @@ int main(int argc, char *argv[]) {
 		double* flatDouble = new double[n * numberOfSamples];
 
 		// GPU kernel launch
-		launchKernelFloat(n, numberOfSamples, (float)a, (float)b, flatFloat);
-		launchKernelDouble(n, numberOfSamples, a, b, flatDouble);
+		launchKernelFloat(n, numberOfSamples, (float)a, (float)b, flatFloat, timing);
+		launchKernelDouble(n, numberOfSamples, a, b, flatDouble, timing);
 
 		// Reconstruct 2D structure
 		for (ui = 0; ui < n; ++ui) {
